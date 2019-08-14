@@ -17,7 +17,7 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
 
 - task:DotNetCoreCLI@2
-  displayName: 'dotnet build $(buildConfiguration)'
+  displayName: 'dotnet publish $(buildConfiguration)'
   inputs:
 	command:publish
 	publishWebProjects:True
