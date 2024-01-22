@@ -23,6 +23,8 @@ steps:
     publishWebProjects: True
     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: True
-
+- task: WhiteSource@21
+  inputs:
+    cwd: '$(System.DefaultWorkingDirectory)'
 - task: PublishBuildArtifacts@1
   displayName: 'publish artifacts'
