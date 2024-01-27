@@ -19,7 +19,7 @@ steps:
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'SonarCloud'
-    organization: 'vishal-darji'
+    organization: 'vishal.darji'
     scannerMode: 'MSBuild'
     projectKey: 'testvishal'
     projectName: 'testvishal'
