@@ -13,16 +13,18 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
-
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'SonarCloud'
-    organization: 'vishal.darji'
+    organization: 'vishal-darji'
     scannerMode: 'MSBuild'
-    projectKey: 'testvishal'
+    projectKey: 'Testvishal'
     projectName: 'Testvishal'
+
+
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: 'dotnet build $(buildConfiguration)'
+
 
 - task: SonarCloudAnalyze@1
 
