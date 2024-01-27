@@ -19,13 +19,13 @@ steps:
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'SonarCloud'
-    organization: 'vishal-darji'
-    scannerMode: 'dotnet'
-    projectKey: 'vishal-darji_testvishal'
+    organization: 'vishal.darji'
+    scannerMode: 'MSBuild'
+    projectKey: 'testvishal'
     projectName: 'Testvishal'
 
-steps:
-- task: SonarSource.sonarcloud.ce096e50–6155–4de8–8800–4221aaeed4a1.SonarCloudAnalyze@1
-  displayName: ‘Run Code Analysis’
-- task: SonarSource.sonarcloud.38b27399-a642–40af-bb7d-9971f69712e8.SonarCloudPublish@1
-  displayName: ‘Publish Quality Gate Result’
+- task: SonarCloudAnalyze@1
+
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
