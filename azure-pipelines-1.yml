@@ -21,8 +21,8 @@ steps:
     SonarCloud: 'SonarCloud'
     organization: 'vishal-darji'
     scannerMode: 'MSBuild'
-    projectKey: 'testvishal'
-    projectName: 'testvishal'
+    projectKey: 'vishal-darji_testvishal'
+    projectName: 'Testvishal'
 
 - task: SonarCloudAnalyze@1
 
