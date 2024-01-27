@@ -21,10 +21,12 @@ steps:
     SonarCloud: 'SonarCloud'
     organization: 'vishal-darji'
     scannerMode: 'MSBuild'
-    projectKey: 'vishal-darji_testvishal'
+    projectKey: 'testvishal'
     projectName: 'testvishal'
 
 - task: SonarCloudAnalyze@1
+  inputs:
+    jdkversion: 'JAVA_HOME_17_X64'
 
 - task: SonarCloudPublish@1
   inputs:
